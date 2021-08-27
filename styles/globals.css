@@ -14,3 +14,20 @@ a {
 * {
   box-sizing: border-box;
 }
+
+*:focus{
+  outline: unset;
+}
+
+html {
+  font-size: 18px;
+}
+
+.todoLayout {
+  padding: 24px;
+  width: 100%;
+  border-radius: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+

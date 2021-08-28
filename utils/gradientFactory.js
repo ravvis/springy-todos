@@ -13,4 +13,10 @@ export default shuffleArray([
   "linear-gradient(to right, #e1eec3, #f05053)",
   "linear-gradient(to right, #00b09b, #96c93d)",
   "linear-gradient(to right, #403B4A, #403B4A)",
+  "linear-gradient(to right, #bc4e9c, #f80759)",
+  "linear-gradient(to right,#e33864,#f17235)",
+  "linear-gradient(to right,#98c46c,#f3b5e4)",
+  "linear-gradient(to right,#FEAC5E,#C779D0,#4BC0C8)",
+  "linear-gradient(to right,#DA22FF,#9733EE)",
+
 ])

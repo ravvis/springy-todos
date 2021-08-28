@@ -33,16 +33,33 @@ export default function Todos() {
     id: generateRandomId(),
     bgColor: getFancyGradient()
   })));
+
+  function addTodo(todo){
+    todo && setTodos([{
+      name: todo,
+      id: generateRandomId(),
+      bgColor: getFancyGradient()
+    }, ...todos]);
+  }
+
+  function deleteTodo(id){
+    if(!id) return;
+
+    const todoIdx = todos.findIndex(todo => todo.id === id);
+
+    if(todoIdx < 0) return;
+
+    setTodos([
+      ...todos.slice(0, todoIdx),
+      ...todos.slice(todoIdx + 1, todos.length)
+    ])
+  }
+
   return <TodosContext.Provider value={{
     todos,
     setTodos,
-    addTodo: (todo) => {
-      todo && setTodos([{
-        name: todo,
-        id: generateRandomId(),
-        bgColor: getFancyGradient()
-      }, ...todos]);
-    }
+    addTodo,
+    deleteTodo
   }}>
     <AddTodoCta/>
     {
